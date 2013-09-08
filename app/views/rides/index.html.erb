@@ -1,0 +1,35 @@
+<h1>Listing rides</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Source lat</th>
+      <th>Source lon</th>
+      <th>Dest lat</th>
+      <th>Dest lon</th>
+      <th>User</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @rides.each do |ride| %>
+      <tr>
+        <td><%= ride.source_lat %></td>
+        <td><%= ride.source_lon %></td>
+        <td><%= ride.dest_lat %></td>
+        <td><%= ride.dest_lon %></td>
+        <td><%= ride.user_id %></td>
+        <td><%= link_to 'Show', ride %></td>
+        <td><%= link_to 'Edit', edit_ride_path(ride) %></td>
+        <td><%= link_to 'Destroy', ride, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ride', new_ride_path %>

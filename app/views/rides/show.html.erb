@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Source lat:</strong>
+  <%= @ride.source_lat %>
+</p>
+
+<p>
+  <strong>Source lon:</strong>
+  <%= @ride.source_lon %>
+</p>
+
+<p>
+  <strong>Dest lat:</strong>
+  <%= @ride.dest_lat %>
+</p>
+
+<p>
+  <strong>Dest lon:</strong>
+  <%= @ride.dest_lon %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @ride.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_ride_path(@ride) %> |
+<%= link_to 'Back', rides_path %>
